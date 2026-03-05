@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -11,7 +10,6 @@
 </head>
 
 <body>
-
 
 <!-- IMAGE SLIDER -->
 
@@ -24,25 +22,21 @@
 </div>
 
 
-
-<!-- DARK OVERLAY -->
+<!-- OVERLAY -->
 
 <div id="overlay"></div>
-
 
 
 <!-- ADMISSION POPUP -->
 
 <div id="admissionPopup">
 
-<span class="closeBtn" onclick="minimizePopup()">✖</span>
+<span class="closeBtn" id="closePopup">✖</span>
 
 <h2>Admission Form</h2>
 
 <input type="text" placeholder="Student Name">
-
 <input type="tel" placeholder="Phone Number">
-
 <input type="text" placeholder="Class">
 
 <button>Submit</button>
@@ -50,13 +44,11 @@
 </div>
 
 
+<!-- FLOATING BUTTON -->
 
-<!-- MINIMIZED BUTTON -->
-
-<div id="popupButton" onclick="openPopup()">
+<div id="popupButton">
 Admission Form
 </div>
-
 
 
 <script src="script.js"></script>
