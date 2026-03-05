@@ -1,7 +1,6 @@
-/* IMAGE SLIDER */
+// IMAGE SLIDER
 
 let slides = document.querySelectorAll(".slide");
-
 let index = 0;
 
 function changeSlide(){
@@ -18,27 +17,37 @@ slides[index].classList.add("active");
 
 }
 
-setInterval(changeSlide, 4000);
+setInterval(changeSlide,4000);
 
 
 
-/* POPUP FUNCTIONS */
+// POPUP SYSTEM
 
-function minimizePopup(){
-
-document.getElementById("admissionPopup").classList.add("hidden");
-document.getElementById("overlay").classList.add("hidden");
-
-document.getElementById("popupButton").style.display = "block";
-
-}
+const popup = document.getElementById("admissionPopup");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("closePopup");
+const popupButton = document.getElementById("popupButton");
 
 
-function openPopup(){
+// CLOSE POPUP
 
-document.getElementById("admissionPopup").classList.remove("hidden");
-document.getElementById("overlay").classList.remove("hidden");
+closeBtn.addEventListener("click",function(){
 
-document.getElementById("popupButton").style.display = "none";
+popup.classList.add("hidden");
+overlay.classList.add("hidden");
 
-}
+popupButton.style.display="block";
+
+});
+
+
+// OPEN POPUP AGAIN
+
+popupButton.addEventListener("click",function(){
+
+popup.classList.remove("hidden");
+overlay.classList.remove("hidden");
+
+popupButton.style.display="none";
+
+});
