@@ -1,148 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <title>SCKP Institution</title>
 
-<style>
-
-/* ===== BODY ===== */
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f5f5f5;
-}
-
-/* ===== IMAGE SLIDER ===== */
-
-.slider{
-width:100%;
-height:500px;
-overflow:hidden;
-position:relative;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-transition:opacity 1s ease-in-out;
-}
-
-.slide.active{
-opacity:1;
-}
-
-/* ===== POPUP ===== */
-
-#overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-z-index:999;
-}
-
-#admissionPopup{
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:white;
-width:350px;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 25px rgba(0,0,0,0.3);
-z-index:1000;
-}
-
-#admissionPopup h2{
-margin-top:0;
-text-align:center;
-}
-
-/* close button */
-
-.closeBtn{
-position:absolute;
-top:10px;
-right:15px;
-font-size:20px;
-cursor:pointer;
-}
-
-/* inputs */
-
-input{
-width:100%;
-padding:10px;
-margin:8px 0;
-border:1px solid #ccc;
-border-radius:5px;
-}
-
-/* submit button */
-
-button{
-width:100%;
-padding:10px;
-background:#1E3A8A;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-font-size:16px;
-}
-
-/* minimized button */
-
-#popupButton{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#F59E0B;
-color:white;
-padding:12px 18px;
-border-radius:30px;
-font-weight:bold;
-cursor:pointer;
-display:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* hidden class */
-
-.hidden{
-display:none;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- ===== IMAGE SLIDER ===== -->
+
+<!-- IMAGE SLIDER -->
 
 <div class="slider">
 
-<img src="https://picsum.photos/1920/500?1" class="slide active">
-<img src="https://picsum.photos/1920/500?2" class="slide">
-<img src="https://picsum.photos/1920/500?3" class="slide">
+<img src="images/photo1.jpg" class="slide active">
+<img src="images/photo2.jpg" class="slide">
+<img src="images/photo3.jpg" class="slide">
 
 </div>
 
-<!-- ===== DARK OVERLAY ===== -->
+
+
+<!-- DARK OVERLAY -->
 
 <div id="overlay"></div>
 
-<!-- ===== ADMISSION POPUP ===== -->
+
+
+<!-- ADMISSION POPUP -->
 
 <div id="admissionPopup">
 
@@ -160,57 +49,17 @@ display:none;
 
 </div>
 
-<!-- ===== MINIMIZED BUTTON ===== -->
+
+
+<!-- MINIMIZED BUTTON -->
 
 <div id="popupButton" onclick="openPopup()">
 Admission Form
 </div>
 
-<script>
 
-/* ===== IMAGE SLIDER ===== */
 
-let slides=document.querySelectorAll(".slide");
-
-let index=0;
-
-function changeSlide(){
-
-slides[index].classList.remove("active");
-
-index++;
-
-if(index>=slides.length){
-index=0;
-}
-
-slides[index].classList.add("active");
-
-}
-
-setInterval(changeSlide,4000);
-
-/* ===== POPUP FUNCTIONS ===== */
-
-function minimizePopup(){
-
-document.getElementById("admissionPopup").classList.add("hidden");
-document.getElementById("overlay").classList.add("hidden");
-
-document.getElementById("popupButton").style.display="block";
-
-}
-
-function openPopup(){
-
-document.getElementById("admissionPopup").classList.remove("hidden");
-document.getElementById("overlay").classList.remove("hidden");
-
-document.getElementById("popupButton").style.display="none";
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
