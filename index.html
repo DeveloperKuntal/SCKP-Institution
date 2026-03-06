@@ -14,9 +14,13 @@
 
 <body>
 
+
 <header>
+
 <h2>SCKP Institution</h2>
+
 </header>
+
 
 
 <section class="hero">
@@ -29,13 +33,13 @@
 
 
 
-<!-- POPUP FORM -->
+<!-- ADMISSION POPUP -->
 
-<div id="popupForm" class="popup">
+<div id="popupOverlay">
 
-<div class="popup-content">
+<div class="popup-box">
 
-<span class="close" onclick="minimizeForm()">×</span>
+<button class="close-btn" onclick="minimizeForm()">−</button>
 
 <h2>Admission Enquiry</h2>
 
@@ -47,7 +51,7 @@
 
 <input type="tel" placeholder="Phone Number" required>
 
-<button type="submit">Submit</button>
+<button type="submit" class="submit-btn">Submit</button>
 
 </form>
 
@@ -65,29 +69,34 @@
 
 <script>
 
-window.addEventListener("load", function(){
+window.onload = function(){
 
-document.getElementById("popupForm").style.display="flex";
+document.getElementById("popupOverlay").style.display="flex";
 
-});
+}
+
+
 
 function minimizeForm(){
 
-document.getElementById("popupForm").style.display="none";
+document.getElementById("popupOverlay").style.display="none";
 
 document.getElementById("floatingBtn").style.display="block";
 
 }
 
+
+
 function openForm(){
 
-document.getElementById("popupForm").style.display="flex";
+document.getElementById("popupOverlay").style.display="flex";
 
 document.getElementById("floatingBtn").style.display="none";
 
 }
 
 </script>
+
 
 </body>
 </html>
