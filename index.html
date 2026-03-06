@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,114 +11,30 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
+
 <header>
 
-<div class="logo">SCKP Institution</div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#courses">Courses</a>
-<a href="#faculty">Faculty</a>
-</nav>
+<h2>SCKP Institution</h2>
 
 </header>
 
 
 
-<!-- HERO -->
-
 <section class="hero">
 
-<div class="hero-slider">
-
-<div class="slide slide1"></div>
-<div class="slide slide2"></div>
-<div class="slide slide3"></div>
-
-</div>
-
-<div class="hero-content">
-
-<h1 class="typing">Build Your Academic Future</h1>
+<h1>Build Your Academic Future</h1>
 
 <p>Best coaching institute in Naharpada, Baripada</p>
 
-<a href="#" class="btn">Join Now</a>
-
-</div>
-
 </section>
 
 
 
-<!-- COURSES -->
-
-<section id="courses">
-
-<h2 class="section-title">Our Courses</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Class 8</h3>
-<p>Strong foundation for higher classes.</p>
-</div>
-
-<div class="card">
-<h3>Class 9</h3>
-<p>Concept clarity and exam preparation.</p>
-</div>
-
-<div class="card">
-<h3>Class 10</h3>
-<p>Board exam focused coaching.</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- FACULTY -->
-
-<section id="faculty">
-
-<h2 class="section-title">Our Faculty</h2>
-
-<div class="faculty-container">
-
-<div class="faculty-card">
-<img src="https://randomuser.me/api/portraits/men/32.jpg">
-<h3>Mr. Sharma</h3>
-<p>Mathematics</p>
-</div>
-
-<div class="faculty-card">
-<img src="https://randomuser.me/api/portraits/women/44.jpg">
-<h3>Mrs. Singh</h3>
-<p>Science</p>
-</div>
-
-<div class="faculty-card">
-<img src="https://randomuser.me/api/portraits/men/76.jpg">
-<h3>Mr. Das</h3>
-<p>English</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- POPUP -->
+<!-- ADMISSION POPUP -->
 
 <div id="popupOverlay">
 
@@ -145,11 +62,42 @@
 
 
 
+<!-- FLOATING BUTTON -->
+
 <button id="floatingBtn" onclick="openForm()">Admission</button>
 
 
 
-<script src="script.js"></script>
+<script>
+
+window.onload = function(){
+
+document.getElementById("popupOverlay").style.display="flex";
+
+}
+
+
+
+function minimizeForm(){
+
+document.getElementById("popupOverlay").style.display="none";
+
+document.getElementById("floatingBtn").style.display="block";
+
+}
+
+
+
+function openForm(){
+
+document.getElementById("popupOverlay").style.display="flex";
+
+document.getElementById("floatingBtn").style.display="none";
+
+}
+
+</script>
+
 
 </body>
 </html>
