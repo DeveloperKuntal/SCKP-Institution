@@ -1,9 +1,8 @@
-*{ 
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
@@ -24,24 +23,12 @@ position:sticky;
 top:0;
 background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
-z-index:10;
-}
-
-.logo{
-font-size:22px;
-font-weight:600;
 }
 
 nav a{
 color:white;
-margin-left:25px;
+margin-left:20px;
 text-decoration:none;
-font-size:14px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#60a5fa;
 }
 
 
@@ -75,16 +62,29 @@ opacity:0;
 animation:slider 15s infinite;
 }
 
-.slide:nth-child(1){animation-delay:0s;}
-.slide:nth-child(2){animation-delay:5s;}
-.slide:nth-child(3){animation-delay:10s;}
+.slide1{
+background-image:url("https://images.unsplash.com/photo-1523240795612-9a054b0db644");
+animation-delay:0s;
+}
+
+.slide2{
+background-image:url("https://images.unsplash.com/photo-1509062522246-3755977927d7");
+animation-delay:5s;
+}
+
+.slide3{
+background-image:url("https://images.unsplash.com/photo-1513258496099-48168024aec0");
+animation-delay:10s;
+}
 
 @keyframes slider{
+
 0%{opacity:0}
 10%{opacity:1}
 30%{opacity:1}
 40%{opacity:0}
 100%{opacity:0}
+
 }
 
 
@@ -98,28 +98,34 @@ padding:40px;
 border-radius:10px;
 }
 
+
+
+/* TYPING */
+
 .typing{
+overflow:hidden;
 border-right:3px solid white;
 white-space:nowrap;
-overflow:hidden;
-width:0;
 animation:typing 4s steps(30,end) forwards;
 }
 
 @keyframes typing{
+
 from{width:0}
 to{width:100%}
+
 }
+
+
 
 .btn{
 display:inline-block;
 margin-top:20px;
 background:white;
-color:#111;
+color:black;
 padding:12px 25px;
 border-radius:30px;
 text-decoration:none;
-font-weight:600;
 }
 
 
@@ -133,12 +139,11 @@ padding:80px 10%;
 .section-title{
 text-align:center;
 margin-bottom:50px;
-font-size:32px;
 }
 
 
 
-/* CARDS */
+/* COURSES */
 
 .cards{
 display:grid;
@@ -150,12 +155,31 @@ gap:30px;
 background:#1e293b;
 padding:30px;
 border-radius:10px;
-transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-10px);
-background:#334155;
+
+
+/* FACULTY */
+
+.faculty-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.faculty-card{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+text-align:center;
+}
+
+.faculty-card img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
 }
 
 
@@ -172,12 +196,11 @@ background:rgba(0,0,0,0.6);
 display:none;
 justify-content:center;
 align-items:center;
-z-index:1000;
 }
 
 .popup-box{
 background:white;
-color:#111;
+color:black;
 padding:35px;
 border-radius:10px;
 width:320px;
@@ -188,23 +211,19 @@ position:relative;
 .popup-box form{
 display:flex;
 flex-direction:column;
-gap:12px;
+gap:10px;
 margin-top:20px;
 }
 
 .popup-box input{
-padding:12px;
-border-radius:6px;
-border:1px solid #ccc;
+padding:10px;
 }
 
 .submit-btn{
 background:#2563eb;
 border:none;
 color:white;
-padding:12px;
-border-radius:6px;
-cursor:pointer;
+padding:10px;
 }
 
 .close-btn{
@@ -219,7 +238,7 @@ cursor:pointer;
 
 
 
-/* FLOATING BUTTON */
+/* FLOAT BUTTON */
 
 #floatingBtn{
 position:fixed;
@@ -232,5 +251,4 @@ padding:14px 22px;
 border-radius:30px;
 cursor:pointer;
 display:none;
-z-index:1001;
 }
