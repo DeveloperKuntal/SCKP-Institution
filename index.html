@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -13,33 +14,28 @@
 
 <body>
 
-
-
 <header>
-
 <h2>SCKP Institution</h2>
-
 </header>
-
 
 
 <section class="hero">
 
 <h1>Build Your Academic Future</h1>
 
-<p>Best coaching institute in Naharpada, Baripada.</p>
+<p>Best coaching institute in Naharpada, Baripada</p>
 
 </section>
 
 
 
-<!-- ADMISSION POPUP -->
+<!-- POPUP FORM -->
 
 <div id="popupForm" class="popup">
 
 <div class="popup-content">
 
-<span class="close-btn" onclick="minimizeForm()">×</span>
+<span class="close" onclick="minimizeForm()">×</span>
 
 <h2>Admission Enquiry</h2>
 
@@ -63,39 +59,35 @@
 
 <!-- FLOATING BUTTON -->
 
-<button id="openFormBtn" onclick="openForm()">Admission</button>
+<button id="floatingBtn" onclick="openForm()">Admission</button>
 
 
 
 <script>
 
-window.onload = function(){
+window.addEventListener("load", function(){
+
 document.getElementById("popupForm").style.display="flex";
-}
 
-
+});
 
 function minimizeForm(){
 
 document.getElementById("popupForm").style.display="none";
 
-document.getElementById("openFormBtn").style.display="block";
+document.getElementById("floatingBtn").style.display="block";
 
 }
-
-
 
 function openForm(){
 
 document.getElementById("popupForm").style.display="flex";
 
-document.getElementById("openFormBtn").style.display="none";
+document.getElementById("floatingBtn").style.display="none";
 
 }
 
 </script>
-
-
 
 </body>
 </html>
